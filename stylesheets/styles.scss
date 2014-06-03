@@ -1,0 +1,386 @@
+@import "bootstrap/_variables.scss";
+@import "bootstrap/_mixins.scss";
+
+html {
+	body {
+		background: url(http://bowman.host.tivilon.com/media/1025/BowmanWingLeft.jpg);
+		font-family: 'Source Sans Pro', sans-serif;
+		nav {
+			&.navbar {
+				background: #00536e;
+				border: 0;
+				margin: 0;
+				&.navbar-default {
+					.navbar-collapse {
+						border: 0;
+						@include box-shadow(none);
+						ul {
+							margin: 0;
+							&.navbar-nav {
+								.open {
+									>a {
+										background-color: #1f6a7f;
+										font-size: 16px !important;
+									}
+									a {
+										color: #fff;
+										font-size: 14px;
+									}
+								}
+							}
+							li {
+								a {
+									border-bottom: 1px solid #006a8c;
+									color: #fff;
+									font-size: 16px;
+								}
+							}
+						}
+					}
+					.navbar-toggle {
+						border-color: #006a8c;
+						&:hover {
+							background-color: transparent;
+						}
+						&:focus {
+							background-color: #003e52;
+						}
+						.icon-bar {
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.container-fluid {
+			max-width: 1500px;
+			&.header {
+				background: #1f6a7f;
+				.logo {
+					float: left;
+					padding: 6px 0 15px 0;
+				}
+				.header-info {
+					float: right;
+					margin-top: 36px;
+					text-align: right;
+					h1 {
+						color: #fff;
+						font-size: 32px;
+						font-weight: normal;
+						line-height: 1em;
+						margin-top: 0;
+						a {
+							display: inline-block;
+							height: 30px;
+							position: relative;
+							width: 30px;
+							img {
+								height: auto;
+								left: 0;
+								position: absolute;
+								top: 0;
+								width: 30px;
+							}
+						}
+					}
+					ul {
+						color: #75adbf;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						li {
+							background: url(http://bowman.host.tivilon.com/media/1016/list.jpg) 14px center no-repeat;
+							float: left;
+							font-size: 18px;
+							line-height: 1.11111111em;
+							padding-left: 31px;
+							&:first-child {
+								background: none;
+							}
+						}
+					}
+				}
+			}
+			&.desktop-nav {
+				background: #00536e;
+				ul {
+					float: left;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						border-left: 1px solid #006a8c;
+						float: left;
+						margin: 0;
+						padding: 0;
+						position: relative;
+						&:hover {
+							ul {
+								display: block;
+							}
+						}
+						a {
+							background: #00536e;
+							color: #fff;
+							display: inline-block;
+							font-size: 18px;
+							line-height: 1em;
+							padding: 20px 41px;
+							@include transition (background .3s ease-in-out);
+							&:hover {
+								background: #006a8c;
+								text-decoration: none;
+							}
+						}
+						ul {
+							display: none;
+							position: absolute;
+							width: 204px;
+							li {
+								border-bottom: 1px solid #006a8c;
+								width: 100%;
+								a {
+									font-size: 13px;
+									padding: 8px 10px;
+									width: 100%;
+								}
+							}
+						}
+						&:first-child {
+							border-left: 0;
+						}
+					}
+				}
+			}
+			&.main-content {
+				background: url(http://bowman.host.tivilon.com/media/1018/main-bg.jpg);
+				background-size: cover;
+				min-height: 722px;
+				.boxslider {
+					height: 280px;
+					margin: 0 auto;
+					min-width: 1265px;
+					position: relative;
+					top: 450px;
+					.sliderwingleft {
+						background: url(http://bowman.host.tivilon.com/media/1028/sliderwing.png);
+						@include box-shadow(0 0 20px 5px #000);
+						height: 194px;
+						left: 132px;
+						margin-top: 45px;
+						position: absolute;
+						width: 28px;
+					}
+					.sliderwingright {
+						background: url(http://bowman.host.tivilon.com/media/1028/sliderwing.png);
+						@include box-shadow(0 0 20px 5px #000);
+						height: 194px;
+						right: 132px;
+						margin-top: 45px;
+						position: absolute;
+						width: 28px;
+					}
+					.prev, .next {
+						cursor: pointer;
+						margin-top: 25px;
+						position: absolute;
+						z-index: 99;
+					}
+					.prev {
+						left: 0;
+					}
+					.next {
+						right: 0;
+					}
+					.wg-boxslider {
+						margin: 0 auto;
+						width: 1000px !important;
+						ul {
+							list-style: none;
+							li {
+								background: url(http://bowman.host.tivilon.com/media/1026/BowmanBox.png) no-repeat;
+								margin: 0 51px 0 -17px;
+								opacity: 1;
+								@include transition(opacity 0.3s ease-in-out);
+								&:hover {
+									opacity: .8;
+								}
+								a {
+									color: #ebf5f7;
+									display: table-cell;
+									font-size: 60px;
+									font-weight: 200;
+									height: 260px;
+									line-height: 65px;
+									text-align: center;
+									vertical-align: middle;
+									width: 320px;
+									&:hover {
+										text-decoration: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.testimonials-news {
+				background: #1f6a7f;
+				padding: 40px 0 50px 0;
+				.testimonials, .news {
+					background: url(http://bowman.host.tivilon.com/media/1020/patton1.png) #bbd2d8;
+					border: 2px solid #053644;
+					height: 223px;
+					padding: 10px;
+					h1 {
+						color: #00536e;
+						font-size: 48px;
+						line-height: 36px;
+						margin: 0;
+						padding-bottom: 6px;
+					}
+					ul {
+						&.slideshow {
+							color: #00536e;
+							height: 165px;
+							list-style: none;
+							margin: 0;
+							padding: 0;
+							position: absolute;
+							width: 95%;
+							z-index: 999;
+							li {
+								width: 95%;
+							}
+						}
+					}
+					.nav_wrapper {
+						bottom: 10px;
+						float: right;
+						position: absolute;
+						right: 10px;
+						width: 95%;
+						z-index: 999999;
+						#pager1, #pager2 {
+							position: relative;
+							text-align: right;
+							a {
+								background: url(http://bowman.host.tivilon.com/media/1014/circle-empty.png) no-repeat left top;
+								display: inline-block;
+								height: 17px;
+								outline: none;
+								text-decoration: none;
+								width: 17px;
+								&.activeSlide {
+									background: url(http://bowman.host.tivilon.com/media/1015/circle-full.png) no-repeat left top;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: $screen-lg-min) {
+	html {
+		body {
+			.container-fluid {
+				&.desktop-nav {
+					ul {
+						li {
+							a {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+				&.main-content {
+					min-height: 500px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: $screen-md-min) {
+	html {
+		body {
+			.container-fluid {
+				&.header {
+					.logo {
+						img {
+							height: auto;
+							width: 100px;
+						}
+					}
+					.header-info {
+						margin-top: 15px;
+						h1 {
+							font-size: 22px;
+							a {
+								height: 30px;
+								width: 25px;
+								img {
+									bottom: 0;
+									top: auto;
+									width: 25px;
+								}
+							}
+						}
+						ul {
+							li {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+				&.testimonials-news {
+					.testimonials {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: $screen-sm-min) {
+	html {
+		body {
+			.container-fluid {
+				&.main-content {
+					min-height: 400px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: $screen-xs-min) {
+	html {
+		body {
+			.container-fluid {
+				&.header {
+					.logo {
+						padding: 6px 0 10px 0;
+						img {
+							width: 90px;
+						}
+					}
+					.header-info {
+						margin: 0;
+						h1 {
+							line-height: 79px;
+							margin: 0;
+						}
+						ul {
+							display: none;
+						}
+					}
+				}
+				&.main-content {
+					min-height: 300px;
+				}
+			}
+		}
+	}
+}
