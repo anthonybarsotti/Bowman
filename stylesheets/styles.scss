@@ -5,6 +5,9 @@ html {
 	body {
 		background: url(http://bowman.host.tivilon.com/media/1025/BowmanWingLeft.jpg);
 		font-family: 'Source Sans Pro', sans-serif;
+		.row {
+			margin: 0;
+		}
 		nav {
 			&.navbar {
 				background: #00536e;
@@ -15,7 +18,7 @@ html {
 						border: 0;
 						@include box-shadow(none);
 						ul {
-							margin: 0;
+							margin: 0 0 20px 0;
 							&.navbar-nav {
 								.open {
 									>a {
@@ -66,15 +69,21 @@ html {
 					text-align: right;
 					h1 {
 						color: #fff;
-						font-size: 32px;
+						font-size: 38px;
 						font-weight: normal;
 						line-height: 1em;
 						margin-top: 0;
 						a {
-							display: inline-block;
-							height: 30px;
-							position: relative;
-							width: 30px;
+							color: #fff;
+							&:hover {
+								text-decoration: none;
+							}
+							&.twitter {
+								display: inline-block;
+								height: 30px;
+								position: relative;
+								width: 30px;
+							}
 							img {
 								height: auto;
 								left: 0;
@@ -280,6 +289,45 @@ html {
 					}
 				}
 			}
+			&.footer {
+				background: #00485f;
+				.row {
+					.container {
+						.col-sm-3 {
+							ul {
+								background: #013f53;
+								height: 370px;
+								list-style: none;
+								padding: 20px 20px 0 20px;
+								li {
+									color: #fff;
+									font-size: 20px;
+									line-height: 1em;
+									margin-bottom: 5px;
+									a {
+										color: #fff;
+										font-family: 'Raleway', sans-serif;
+										font-size: 14px;
+										letter-spacing: 0.1em;
+										line-height: 20px;
+										padding: 2px 10px 2px 2px;
+										@include transition(.3s color ease-in-out);
+										&:hover {
+											color: #ffc000;
+											text-decoration: none;
+										}
+									}
+								}
+							}
+						}
+						&.copyright {
+							color: #fff;
+							padding: 0 50px;
+							text-align: right;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -299,6 +347,23 @@ html {
 				&.main-content {
 					min-height: 500px;
 				}
+				&.testimonials-news {
+					.testimonials, .news {
+						height: 260px;
+						ul {
+							&.slideshow {
+								height: 180px;
+							}
+						}
+					}
+				}
+				&.footer {
+					.row {
+						.container {
+							width: 890px;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -317,10 +382,12 @@ html {
 					.header-info {
 						margin-top: 15px;
 						h1 {
-							font-size: 22px;
+							font-size: 20px;
 							a {
-								height: 30px;
-								width: 25px;
+								&.twitter {
+									height: 30px;
+									width: 25px;
+								}
 								img {
 									bottom: 0;
 									top: auto;
@@ -340,6 +407,13 @@ html {
 						margin-bottom: 30px;
 					}
 				}
+				&.footer {
+					.row {
+						.container {
+							width: auto;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -350,6 +424,29 @@ html {
 			.container-fluid {
 				&.main-content {
 					min-height: 400px;
+				}
+				&.footer {
+					.row {
+						.container {
+							padding: 20px 0;
+							.col-sm-3 {
+								ul {
+									height: auto;
+									padding: 20px;
+									li {
+										font-size: 16px;
+										a {
+											font-size: 12px;
+										}
+									}
+								}
+							}
+							&.copyright {
+								font-size: 12px;
+								text-align: center;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -379,6 +476,24 @@ html {
 				}
 				&.main-content {
 					min-height: 300px;
+					background-position: -100px 0;
+				}
+				&.testimonials-news {
+					.testimonials, .news {
+						height: 300px;
+						h1 {
+							font-size: 38px;
+						}
+						ul {
+							&.slideshow {
+								height: 76%;
+								margin-top: 5px;
+								li {
+									width: 97% !important;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
